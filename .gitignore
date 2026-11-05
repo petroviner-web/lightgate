@@ -20,3 +20,9 @@ firmware/build/
 .idea/
 Thumbs.db
 .DS_Store
+
+# MSVC build output
+*.obj
+*.exe
+*.pdb
+*.ilk
