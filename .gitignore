@@ -1,0 +1,22 @@
+# .NET
+bin/
+obj/
+*.user
+.vs/
+
+# Database files created at runtime
+*.db
+*.db-shm
+*.db-wal
+
+# Pico / CMake build output
+firmware/build/
+*.uf2
+*.elf
+*.map
+
+# Editors / OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

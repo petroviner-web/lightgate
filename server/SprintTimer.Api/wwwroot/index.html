@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sprint Timer - rang lista</title>
+  <style>
+    :root {
+      --bg: #f5f6f8; --fg: #1d2330; --card: #ffffff; --accent: #d9480f; --muted: #6b7280;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #111418; --fg: #e6e8ec; --card: #1b1f26; --accent: #ff922b; --muted: #9aa3af; }
+    }
+    body { margin: 0; font-family: system-ui, sans-serif; background: var(--bg); color: var(--fg); }
+    main { max-width: 640px; margin: 2rem auto; padding: 0 1rem; }
+    h1 { margin: 0 0 .25rem; font-size: 1.6rem; }
+    .sub { color: var(--muted); margin-bottom: 1.5rem; }
+    .card { background: var(--card); border-radius: 12px; padding: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: .6rem .4rem; text-align: left; border-bottom: 1px solid rgba(127,127,127,.2); }
+    th { font-size: .8rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+    td.time { font-variant-numeric: tabular-nums; font-weight: 600; text-align: right; }
+    tr.first td { color: var(--accent); font-weight: 700; }
+    .status { margin-top: .75rem; font-size: .85rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Rang lista</h1>
+    <div class="sub">Događaj #<span id="event">1</span>, 10 najboljih vremena</div>
+    <div class="card">
+      <table>
+        <thead>
+          <tr><th>#</th><th>Takmičar</th><th style="text-align:right">Vreme</th></tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+      <div class="status" id="status">Učitavanje...</div>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
